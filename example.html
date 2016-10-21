@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fading Background Example</title>
+	<link rel="stylesheet" type="text/css" href="fading-background.css">
+</head>
+<body>
+	<h1>Fading Background</h1>
+	<h2><a href="https://github.com/Simsso/Fading-Background">GitHub Repository</a>
+	<div id="fading" class="fading-background">
+	</div>
+	<hr>
+	<h4>Image credit</h4>
+	<ul>
+		<li>iss.jpg: NASA</li>
+		<li>sts-129.jpg: NASA</li>
+		<li>sts-134.jpg: NASA</li>
+		<li>NanoRacksCubeSatLaunch.jpg: NASA</li>
+	</ul>
+	<script src="fading-background.js"></script>
+	<script type="text/javascript">
+		var mainBackground = new FadingBackground(document.getElementById('fading'));
+		mainBackground.setImageURLs([
+				'img/iss.jpg',
+				'img/NanoRacksCubeSatLaunch.jpg',
+				'img/STS-129.jpg',
+				'img/STS-134.jpg'
+			]);
+		mainBackground.preloadImages();
+		mainBackground.start(4000);
+	</script>
+</body>
+</html>

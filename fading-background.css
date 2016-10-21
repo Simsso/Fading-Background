@@ -1,0 +1,28 @@
+.fading-background {
+	/* wrapper div */
+	position: relative;
+}
+
+.fading-background-helper-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.fading-background-helper-background, .fading-background-primary-background {
+	transition: opacity 1s ease-in;
+	opacity: 1;
+	width: 100%;
+	height: 500px;
+
+	/* normal background image styling here */
+	background-size: cover;
+	background-position: center;
+}
+
+
+.fading-background-hidden {
+	/* .fading-background-hidden style needs to be the last one of the fading-background styles. */
+	opacity: 0;
+	transition: opacity 0;
+}
