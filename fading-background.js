@@ -11,8 +11,8 @@ function FadingBackground(element) {
 	this.primaryBackground = document.createElement('div');
 	this.primaryBackground.className = "fading-background-primary-background";
 
-	this.element.appendChild(this.primaryBackground);
-	this.element.appendChild(this.helperBackground);
+	this.element.insertBefore(this.helperBackground, this.element.firstChild);
+	this.element.insertBefore(this.primaryBackground, this.element.firstChild);
 }
 
 FadingBackground.imageURLToCSSValue = function(imageURL) {
