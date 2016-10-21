@@ -34,7 +34,7 @@ FadingBackground.prototype.preloadImages = function() {
 		var div = document.createElement('div');
 		div.className = 'fading-background-hidden';
 		div.style.backgroundImage = FadingBackground.imageURLToCSSValue(imageURL);
-		this.element.appendChild(div);
+		this.element.insertBefore(div, this.element.firstChild);
 	}
 };
 
